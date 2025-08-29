@@ -193,6 +193,7 @@ public final class Config implements ConfigData {
         public double frostThreshold = 30;
         @ConfigExtension.Registry(registry = Status.class, i18n = "status")
         public Identifier[] statuses = new Identifier[]{
+                Identifier.fromNamespaceAndPath(MainClass.MOD_ID, "hypixel_skyblock_stats"),
                 Identifier.fromNamespaceAndPath(MainClass.MOD_ID, "health"),
                 Identifier.fromNamespaceAndPath(MainClass.MOD_ID, "hunger"),
                 Identifier.fromNamespaceAndPath(MainClass.MOD_ID, "armour"),

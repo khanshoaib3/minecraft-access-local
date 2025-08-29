@@ -23,6 +23,7 @@ import org.mcaccess.minecraftaccess.addon.statuses.Frost;
 import org.mcaccess.minecraftaccess.addon.statuses.GameMode;
 import org.mcaccess.minecraftaccess.addon.statuses.Health;
 import org.mcaccess.minecraftaccess.addon.statuses.Hunger;
+import org.mcaccess.minecraftaccess.addon.statuses.HypixelSkyblockStats;
 import org.mcaccess.minecraftaccess.addon.worldnarrators.Jade;
 import org.mcaccess.minecraftaccess.addon.worldnarrators.MinecraftAccess;
 import org.mcaccess.minecraftaccess.api.AddonRegistry;
@@ -33,6 +34,7 @@ public class CoreAddon implements MinecraftAccessAddon {
 
     @Override
     public void init(@NotNull AddonRegistry registry) {
+        registry.register("hypixel_skyblock_stats", new HypixelSkyblockStats());
         registry.register("health", new Health());
         registry.register("hunger", new Hunger());
         registry.register("armour", new Armour());
