@@ -7,6 +7,8 @@ import java.nio.file.Paths;
 import com.davykager.tolk.Tolk;
 import lombok.extern.slf4j.Slf4j;
 
+import static org.mcaccess.minecraftaccess.utils.TextUtils.removeFormattingCodes;
+
 @Slf4j
 public class ScreenReaderWindows implements ScreenReaderInterface {
     @Override
@@ -42,7 +44,7 @@ public class ScreenReaderWindows implements ScreenReaderInterface {
             return;
         }
 
-        String narration = formatNarration(text);
+        String narration = removeFormattingCodes(text);
 
         if (Tolk.output(narration, interrupt)) {
             log.info("Narrating(interrupt:{})= {}", interrupt, narration);
