@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import com.davykager.tolk.Tolk;
 import lombok.extern.slf4j.Slf4j;
 
-import static org.mcaccess.minecraftaccess.utils.TextUtils.removeFormattingCodes;
+import static org.mcaccess.minecraftaccess.utils.NarrationUtils.removeFormattingCodes;
 
 @Slf4j
 public class ScreenReaderWindows implements ScreenReaderInterface {
